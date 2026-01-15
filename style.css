@@ -1,5 +1,6 @@
 :root{
-    --primary-color: #E22E6D;
+    --primary-color: #FA804C;
+    --btn-color: #3847D1;
 }
 /*Opensans Font by Google Font*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
@@ -17,7 +18,7 @@ body{
 
 /* shared style */
 .hbtn {
-    background-color: #3847D1;
+    background-color: var(--btn-color);
     border: none;
     padding: 18px 35px;
     border-radius: 5px;
@@ -27,7 +28,7 @@ body{
     cursor: pointer;
 }
 .btn {
-    background-color: #3847D1;
+    background-color: var(--btn-color);
     border: none;
     padding: 15px;
     border-radius: 5px;
@@ -36,13 +37,15 @@ body{
     color: white;
     cursor: pointer;
 }
-
+.btn:hover{
+    background-color: var(--primary-color);
+}
+.hbtn:hover{
+    background-color: var(--primary-color);
+}
 .btn-group {
     flex-wrap: wrap;
     gap: 20px;
-}
-section{
-    margin-top: 50PX;
 }
 a{
     text-decoration: none;
@@ -81,9 +84,13 @@ nav .menu a {
     font-weight: bold;
     color: #474747;
 }
-
+li a:hover{
+    color: var(--primary-color);
+}
+.li:hover{
+    transform: scale(1.2);
+}
 #banner {
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,7 +99,7 @@ nav .menu a {
 }
 .banner-image:hover {
     transition: 10s;
-    transform: scale(1.2) rotateZ(45deg);
+    transform: scale(1.2) rotateZ(5deg);
 }
 #banner .banner-image img {
     max-width: 585px;
@@ -112,7 +119,7 @@ nav .menu a {
 
 #banner .banner-content .htc {
     font-weight: bold;
-    color: #F9804B;
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
@@ -149,20 +156,72 @@ border-radius: 10px;
 .card-footer{
     padding-bottom: 10px;
 }
-
+.card-text{
+    color: var(--primary-color);
+}
+.services{
+    width: 80%;
+    gap: 20px;
+}
 .servicesl{
     width: 100%;
+}
+.sil{
+    margin: 10px;
+}
+.sir{
+    margin: 10px;
 }
 .sil img{
     width: 100%;
 }
 .sir h3{
-    font-size: 25px;
+    font-size: 30px;
 }
 .servicesr img{
     width: 100%;
 }
-
+.servies-item{
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 2px 2px 10px #d1d1d1;
+    margin: 25px 0;
+}
+#footer{
+      color: white;    
+      background-color: #3847D1; 
+      padding: 10px 0;
+}
+.fflex{
+    padding-top: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+}
+.flogo{
+    width: 40%;
+}
+footer h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+footer img{
+    width: 80%;
+}
+.fmenu li{
+    list-style: none;
+}
+.flogo .icon i{
+    margin: 10px;
+}
+hr{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 85%;
+}
+.copyright{
+    text-align: center;
+}
 /* device specific media query  (TABLET)*/
 @media screen and (min-width:577px) and (max-width:850px) {
 
@@ -183,7 +242,6 @@ border-radius: 10px;
     }
 
     header {
-        background-color:  #FFF8F3;
         background-position: bottom right;
         background-repeat: no-repeat;
 
@@ -214,4 +272,5 @@ border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
+}
 }
